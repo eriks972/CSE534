@@ -1,0 +1,30 @@
+[
+    {
+        "delay": 0,
+        "delay_ms": 0,
+        "num_images": 33,
+        "edge_avg": 0.05657232168949011,
+        "cloud_avg": 0.11030165354410808
+    },
+    {
+        "delay": 0.05,
+        "delay_ms": 50,
+        "num_images": 33,
+        "edge_avg": 0.05710541118275036,
+        "cloud_avg": 0.16625673120672052
+    },
+    {
+        "delay": 0.1,
+        "delay_ms": 100,
+        "num_images": 33,
+        "edge_avg": 0.055280996091438064,
+        "cloud_avg": 0.2228651407993201
+    },
+    {
+        "delay": 0.2,
+        "delay_ms": 200,
+        "num_images": 33,
+        "edge_avg": 0.05404022245696097,
+        "cloud_avg": 0.3267405394351844
+    }
+]
