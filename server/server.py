@@ -6,30 +6,39 @@ import numpy as np
 import cv2
 
 app = Flask(__name__)
-model = YOLO("yolov8n.pt")
+
+models = {
+    "yolov8n": YOLO("yolov8n.pt"),
+    "yolov8s": YOLO("yolov8s.pt"),
+    "yolov8m": YOLO("yolov8m.pt")
+}
 
 @app.route("/process", methods=["POST"])
 def process():
-    
-    time.sleep(0.05)  # simulate inference time (50ms)
+    data = request.json
 
-    start = time.time()
+    image_data = data["image"]
+    model_name = data.get("model", "yolov8n")
 
-    data = request.json["image"]
+    model = models[model_name]
 
-    # decode image
-    img_bytes = base64.b64decode(data)
+    img_bytes = base64.b64decode(image_data)
     np_arr = np.frombuffer(img_bytes, np.uint8)
     img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
 
-    # run model
+    start = time.time()
     results = model(img)
-
     end = time.time()
 
+    boxes = results[0].boxes
+    detections = len(boxes)
+    avg_confidence = float(boxes.conf.mean()) if detections > 0 else 0.0
+
     return jsonify({
-        "latency": end - start,
-        "detections": len(results[0].boxes)
+        "model": model_name,
+        "server_inference_time": end - start,
+        "detections": detections,
+        "avg_confidence": avg_confidence
     })
 
 if __name__ == "__main__":

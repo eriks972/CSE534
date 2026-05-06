@@ -1,0 +1,54 @@
+[
+    {
+        "delay": 0,
+        "delay_ms": 0,
+        "num_images": 33,
+        "adaptive_avg_latency": 0.22097768205584903,
+        "adaptive_avg_detections": 13.484848484848484,
+        "adaptive_avg_confidence": 0.6361604341954896,
+        "edge_yolov8n_avg_latency": 0.0566994927146218,
+        "cloud_yolov8m_avg_latency": 0.21508982687285452,
+        "decisions": {
+            "cloud_yolov8m": 33
+        }
+    },
+    {
+        "delay": 0.05,
+        "delay_ms": 50,
+        "num_images": 33,
+        "adaptive_avg_latency": 0.17317356485309024,
+        "adaptive_avg_detections": 12.666666666666666,
+        "adaptive_avg_confidence": 0.626002205140663,
+        "edge_yolov8n_avg_latency": 0.070198680415298,
+        "cloud_yolov8m_avg_latency": 0.30738342169559363,
+        "decisions": {
+            "cloud_yolov8s": 33
+        }
+    },
+    {
+        "delay": 0.1,
+        "delay_ms": 100,
+        "num_images": 33,
+        "adaptive_avg_latency": 0.05963447599700003,
+        "adaptive_avg_detections": 10.363636363636363,
+        "adaptive_avg_confidence": 0.565913175091599,
+        "edge_yolov8n_avg_latency": 0.0602959647323146,
+        "cloud_yolov8m_avg_latency": 0.3337449377233332,
+        "decisions": {
+            "edge_yolov8n": 33
+        }
+    },
+    {
+        "delay": 0.2,
+        "delay_ms": 200,
+        "num_images": 33,
+        "adaptive_avg_latency": 0.06514155503475305,
+        "adaptive_avg_detections": 10.363636363636363,
+        "adaptive_avg_confidence": 0.565913175091599,
+        "edge_yolov8n_avg_latency": 0.0672694408532345,
+        "cloud_yolov8m_avg_latency": 0.4651505441376657,
+        "decisions": {
+            "edge_yolov8n": 33
+        }
+    }
+]
